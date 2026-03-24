@@ -160,6 +160,7 @@ bool sendTelemetry(unsigned int totalSeen, unsigned int totalFpSeen, unsigned in
  */
 void setupNetwork() {
     Log.println("Setup network");
+    WiFi.persistent(false);
     WiFi.setScanMethod(WIFI_ALL_CHANNEL_SCAN);
     GUI::Connected(false, false);
 
